@@ -6,7 +6,7 @@ import React from "react";
 
 const HomePage = () => {
   const app = useAppBridge();
-  const redirect = Redirect.create(app);
+  // const redirect = Redirect.create(app);
 
   return (
     <Page title="Home">

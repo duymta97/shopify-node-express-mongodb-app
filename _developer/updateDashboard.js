@@ -88,6 +88,9 @@ const getApp = async (apiKey, accessToken) => {
   const response = await partnersRequest(FindAppQuery, accessToken, {
     apiKey,
   });
+
+  console.log(response, apiKey, accessToken)
+
   return response.app;
 };
 const updateDashboardURLs = async (apiKey, appUrl) => {
