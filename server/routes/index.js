@@ -22,15 +22,29 @@ userRoutes.get("/api/gql", async (req, res) => {
     isOnline: false,
   });
 
-  const shop = await client.query({
-    data: `{
-      shop {
-        name
+  const products = await client.query({
+    data: `query {
+      products(first: 10, reverse: true) {
+        edges {
+          node {
+            id
+            title
+            handle
+            resourcePublicationOnCurrentPublication {
+              publication {
+                name
+                id
+              }
+              publishDate
+              isPublished
+            }
+          }
+        }
       }
     }`,
   });
 
-  res.status(200).send(shop);
+  res.status(200).send(products);
 });
 
 export default userRoutes;

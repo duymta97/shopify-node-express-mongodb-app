@@ -143,6 +143,21 @@ const HomePage = () => {
             </p>
           </LegacyCard>
         </Layout.Section>
+
+        <Layout.Section fullWidth>
+          <LegacyCard
+            sectioned
+            title="Product"
+            primaryFooterAction={{
+              content: "Go to product list",
+              onAction: () => {
+                navigate("/products");
+              },
+            }}
+          >
+            Product Listing
+          </LegacyCard>
+        </Layout.Section>
       </Layout>
     </Page>
   );

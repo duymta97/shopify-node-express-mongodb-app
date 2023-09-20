@@ -7,11 +7,14 @@ import DebugIndex from "./pages/debugCards/DebugIndex";
 import DevNotes from "./pages/debugCards/DevNotes";
 import GetData from "./pages/debugCards/GetData";
 import Index from "./pages/Index";
+import ProductAPI from "./pages/products";
 
 const routes = {
   "/": () => <Index />,
   "/exitframe": () => <ExitFrame />,
   "/exitframe/:shop": ({ shop }) => <ExitFrame shop={shop} />,
+
+  "/products": () => <ProductAPI />,
   //Debug Cards
   "/debug": () => <DebugIndex />,
   "/debug/activeWebhooks": () => <ActiveWebhooks />,
